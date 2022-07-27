@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import AddNote from './components/AddNote';
+import NotesList from './components/NoteList';
+import Container from '@mui/material/Container';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Container maxWidth="md">
+				<h1>Auctree Notes App</h1>
+				<AddNote />
+				<hr />
+				<NotesList />
+			</Container>
+		</div>
+	);
 }
 
 export default App;
